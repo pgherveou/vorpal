@@ -1023,25 +1023,6 @@ vorpal._exitMode = function(options) {
 }
 
 /**
- * Registers a custom handler for SIGINT.
- * Vorpal exits with 0 by default
- * on a sigint.
- *
- * @param {Function} fn
- * @return {Vorpal}
- * @api public
- */
-
-vorpal.sigint = function(fn) {
-  if (_.isFunction(fn)) {
-    ui.sigint(fn)
-  } else {
-    throw new Error('vorpal.sigint must be passed in a valid function.')
-  }
-  return this
-}
-
-/**
  * Returns the instance of  given command.
  *
  * @param {String} cmd
